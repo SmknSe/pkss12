@@ -36,7 +36,7 @@ graph LR
 ## Путешествие пользователя
 
 ```mermaid
-journey Покупка музыкального инструмента в онлайн-магазине
+journey
     title Путешествие пользователя в магазине музыкальных инструментов
     section Просмотр
       Посещение сайта: 5: Клиент
@@ -104,25 +104,76 @@ mindmap
 
 ```mermaid
 gitGraph
-   commit id: "Начальная настройка проекта"
-   branch интерфейс
-   checkout интерфейс
-   commit id: "Создание базовой структуры интерфейса"
-   commit id: "Реализация страницы каталога товаров"
-   checkout main
-   merge интерфейс id: "Объединение обновлений интерфейса"
-   branch бэкенд
-   checkout бэкенд
-   commit id: "Настройка API-эндпоинтов"
-   commit id: "Реализация аутентификации"
-   checkout main
-   merge бэкенд id: "Объединение бэкенд-сервисов"
-   branch база-данных
-   checkout база-данных
-   commit id: "Проектирование схемы базы данных"
-   commit id: "Заполнение начальных данных о товарах"
-   checkout main
-   merge база-данных id: "Объединение дизайна базы данных"
+    commit id: "Initialize project structure"
+    branch develop
+    checkout develop
+    commit id: "Add project dependencies"
+    commit id: "Configure CI/CD pipeline"
+    
+    branch feature/frontend
+    checkout feature/frontend
+    commit id: "Set up React project"
+    commit id: "Create responsive layout components"
+    commit id: "Implement basic routing"
+    commit id: "Add state management setup"
+    
+    branch feature/product-catalog
+    checkout feature/product-catalog
+    commit id: "Design product list view"
+    commit id: "Implement product filtering"
+    commit id: "Add product search functionality"
+    
+    checkout feature/frontend
+    merge feature/product-catalog id: "Merge product catalog feature"
+    
+    commit id: "Add error handling"
+    commit id: "Implement user authentication UI"
+    
+    checkout develop
+    merge feature/frontend id: "Merge frontend changes"
+    
+    branch feature/backend
+    checkout feature/backend
+    commit id: "Set up Express.js server"
+    commit id: "Create database connection"
+    commit id: "Implement RESTful API endpoints"
+    
+    branch feature/authentication
+    checkout feature/authentication
+    commit id: "Add JWT authentication"
+    commit id: "Implement user registration"
+    commit id: "Add password reset functionality"
+    
+    checkout feature/backend
+    merge feature/authentication id: "Merge authentication feature"
+    
+    commit id: "Add input validation"
+    commit id: "Implement logging middleware"
+    
+    checkout develop
+    merge feature/backend id: "Merge backend services"
+    
+    branch feature/database
+    checkout feature/database
+    commit id: "Design normalized database schema"
+    commit id: "Create migration scripts"
+    commit id: "Add seed data for development"
+    commit id: "Implement database indexes"
+    
+    checkout develop
+    merge feature/database id: "Merge database design"
+    
+    commit id: "Perform integration testing"
+    commit id: "Update documentation"
+    
+    branch release/v1.0
+    checkout release/v1.0
+    commit id: "Prepare release candidate"
+    commit id: "Fix final integration issues"
+    
+    checkout main
+    merge release/v1.0 id: "Release version 1.0"
+
 ```
 
 ### Детали workflow разработки
