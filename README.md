@@ -100,6 +100,58 @@ mindmap
 - Гибкие способы оплаты
 - Система персонализированных рекомендаций
 
+## Квадрант-граф
+
+### Стратегическая карта развития проекта
+
+```mermaid
+quadrantChart
+    title Development Feature Priorities
+    x-axis Low Priority --> High Priority
+    y-axis Low Complexity --> High Complexity
+    
+    quadrant-1 Plan for Upcoming Period
+    quadrant-2 Implement Immediately
+    quadrant-3 Possibly Abandon
+    quadrant-4 Requires Thorough Analysis
+    
+    "Online Consultations with Experts" : [0.7, 0.9]
+    "Musical Instrument Selection Support" : [0.6, 0.7]
+    "Personal Account with Purchase History" : [1, 0.55]
+    "Instrument Sorting by Characteristics" : [0.8, 0.3]
+    "Payment System Integration" : [1, 0.45]
+    "Sales Report Generation" : [0.9, 0.6]
+    "Email Notification Sending" : [0.2, 0.3]
+    "Recommendation System" : [0.6, 0.35]
+    "Online Playing Simulators" : [0.2, 0.7]
+    "Product Filtering by Brands" : [0.8, 0.4]
+    "Video Tutorials for Instrument Setup" : [0.5, 0.6]
+    "Instrument Accessory Matching" : [0.7, 0.75]
+```
+
+### Пояснения к квадрант-карте
+
+#### Стратегические приоритеты (правый нижний квадрант)
+Функции с высокой стратегической ценностью и относительно несложные в реализации:
+- **Интеграция платежных систем**
+- **Создание персонального аккаунта**
+- **Каталогизация с фильтрацией**
+
+#### Высокая сложность (верхний правый квадрант)
+Важные, но технически сложные функции:
+- **Онлайн-консультации с экспертами для выбора**
+- **Генерация отчетов**
+- **Реккомендация аксессуаров к товарам**
+
+### Стратегические выводы
+
+Квадрант-анализ помогает команде разработчиков:
+- Фокусироваться на наиболее ценных функциях
+- Оптимально распределять ресурсы
+- Планировать развитие проекта с учетом стратегической важности и технической сложности каждой функции
+
+**Ключевой приоритет**: Разработка пероснального аккаунта, каталогизация товаров и интеграция платежных сервисов.
+
 ## Workflow разработки
 
 ```mermaid
